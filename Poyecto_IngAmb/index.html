@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <script src="preg.js"></script>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./estilo.css">
+    <title>Relaves Mineros en Chile</title>
+    <style>
+        /* Estilos adicionales para personalizar la apariencia de la página */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #map-container {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #map {
+            width: 80%;
+            height: 80%;
+        }
+        #relaves-info {
+            margin-top: 20px;
+        }
+        #relaves-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #relaves-info li {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        #relaves-info h3 {
+            margin-bottom: 5px;
+        }
+        #relaves-info p {
+            display: none;
+        }
+        .medium-image {
+            width: 300px;
+            margin-top: 20px;
+        }
+        #imagenes {
+            margin-top: 20px;
+        }
+        .large-image {
+            margin-right: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var questions = document.querySelectorAll('#relaves-info li');
+
+            questions.forEach(function (question) {
+                question.addEventListener('click', function () {
+                    var answer = this.querySelector('p');
+                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body class="Fondo">
+    <center><h1 class="Titulo">Relaves Mineros en Chile</h1></center>
+    
+
+    <div id="map-container">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1P3T-ogJPSJwUoujo6wJZRgw7LsKPNoM&ehbc=2E312F" width="80%" height="100%"></iframe>
+    </div>
+     
+    <center><h1 class="linea">imagenes de algunos relaves </h1></center>
+
+    <div id="imagenes">
+        <img class="large-image" src="imagenes/1.png" alt="Image 1">
+        <img class="large-image" src="imagenes/2.jpg" alt="Image 2">
+        <img class="large-image" src="imagenes/3.jpg" alt="Image 3">
+    </div>
+
+    <div id="relaves-info">
+        <h2 class="" style="margin-top: 3px; margin-bottom: 20px; font-family: Arial, Helvetica, sans-serif;">Preguntas y Respuestas sobre los Relaves</h2>
+        <ul>
+            
+            <li class="Color-Filas">
+                <h4 class="fuente">¿Qué es el relave?</h4>
+                <p class="fuente">El relave es un sólido finamente molido, que se descarta en operaciones mineras. Se compone principalmente de material no económico.</p>
+            </li>
+            <li class="Color-Filas">
+                <h4 class="fuente">¿Es el relave un residuo contaminante?</h4>
+                <p class="fuente">Los relaves pueden contener minerales contaminantes que, en ciertas concentraciones, pueden ser tóxicos para el ser humano y el medio ambiente. Es necesario tomar medidas para evitar la movilización de estos elementos.</p>
+            </li>
+            <li class="Color-Filas">
+                <h4 class="fuente">¿Es el relave un residuo sólido peligroso?</h4>
+                <p class="fuente">El relave de minería no se considera un Residuo Sólido Peligroso (RSP) ya que no es producido por actividades humanas, sino que proviene de rocas naturales.</p>
+            </li>
+            <li class="Color-Filas">
+                <h4 class="fuente">¿Qué es un Depósito de Relaves?</h4>
+                <p class="fuente">Es una estructura de ingeniería diseñada para aislar completamente los sólidos (relaves) depositados del ecosistema circundante, cumpliendo con las exigencias legales.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
